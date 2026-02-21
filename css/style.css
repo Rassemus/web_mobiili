@@ -24,11 +24,14 @@ button:hover {
 
 /* Header */
 .header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 0.8rem;
     background: #0f2c44;
     z-index: 1000;
 }
@@ -99,7 +102,7 @@ button:hover {
 }
 
 .nav a.active {
-    pointer-events: none;     /* 🔥 ei voi klikata */
+    pointer-events: none;     /* ei voi klikata */
     opacity: 0.6;             /* hieman himmeämpi */
     border-bottom: 2px solid #006BF7;
     cursor: default;
@@ -124,7 +127,7 @@ button:hover {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6); /* säädä tummuus tästä */
+    background: rgba(0, 0, 0, 0.6);
 }
 
 /* Nostetaan sisältö overlayn päälle */
