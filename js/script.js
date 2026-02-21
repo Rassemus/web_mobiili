@@ -43,6 +43,30 @@ const references = [
         name: "Maailman vakuutajat Oy",
         description: "Toteutimme hybridinä, tarvittava määrä konsultointia sekä kokonaisvaltainen alustan käyttöoikeus.",
         quote: "Riskeeraajien hybridi toteutus soveltui hyvin yrityksellemme. Saimme tarvittavan määrän konsultaatiota kun oma osaamisemme ei riittänyt vaikka riskien hallinta alusta oli todella helppo käyttöinen."
+    },
+    {
+        id: 4,
+        name: "Lorem Oy",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut",
+        quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"
+    },
+    {
+        id: 5,
+        name: "Lorem Oy",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut",
+        quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"
+    },
+    {
+        id: 6,
+        name: "Lorem Oy",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut",
+        quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"
+    },
+    {
+        id: 7,
+        name: "Lorem Oy",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut",
+        quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"
     }
 ];
 
