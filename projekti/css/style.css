@@ -1,0 +1,543 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #101922;
+}
+
+/* Header */
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #0f2c44;
+    z-index: 1000;
+}
+
+.hamburger {
+    width: 28px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Nav */
+.nav {
+    position: fixed;
+    top: -100%;           /* piilossa yläpuolella */
+    left: 0;
+    width: 100%;
+
+    background: #0f2c44;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: top 0.3s ease;
+    z-index: 999;
+}
+
+/* Kun auki */
+.nav.active {
+    top: calc(22px + 2rem);
+}
+
+.nav a {
+    padding: 1rem;
+    text-decoration: none;
+    border-bottom: 1px solid #2a4c6f;
+}
+
+
+
+/* Hero */
+.hero {
+    position: relative;
+    background: url('../kuvat/bg_img.jpg') center/cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Tumma overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6); /* säädä tummuus tästä */
+}
+
+/* Nostetaan sisältö overlayn päälle */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    max-width: 700px;
+    text-align: left;   /* Teksti vasemmalle */
+}
+
+/* Keskitetään vain painike */
+.hero-content > .btn {
+    display: block;
+    width: fit-content;
+    margin: 2rem auto 0 auto;  /* keskittää napin */
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    background: #006BF7;
+    text-decoration: none;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 6px 6px rgba(34, 34, 34, 0.426);
+}
+
+/* Services */
+.services-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.services-preview > h2 {
+    margin-bottom: 1rem;
+}
+
+.service-preview-card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    background: #0043647c;
+    border-radius: 10px;
+    min-height: 230px;
+}
+
+.service-preview-card > h3 {
+    margin-bottom: 10px;
+}
+
+.service-preview-card > a {
+    text-align: right;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+/* Reference */
+.references-section {
+    text-align: left;
+    padding: 3rem 1rem;
+    background: #213a5363;
+}
+
+.references-card {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.references-card .references-subheader {
+    display: block;
+    width: fit-content;
+    margin: 2rem auto 0 auto;  /* keskittää napin */
+}
+
+.references-subheader > span {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* CTA */
+.cta-section {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.cta-section > .btn {
+    background: #C7C6C6;
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+    height: 50px;
+    width: 90%;
+}
+
+.more-text {
+    display: none;
+}
+
+.read-more-btn {
+    display: block;
+    margin-left: auto;
+    margin-top: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.contact-form > .btn {
+    width: 100%;
+}
+
+
+/* Footer */
+.footer {
+    text-align: left;
+    padding: 1rem;
+}
+
+
+/* -----------
+    SERVICE 
+------------*/
+
+.services {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.consultant-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.consultant-info {
+    border-radius: 10px;
+    background: #0000007e;
+    width: 80%;
+    margin-top: -40px;
+    margin-bottom: 1rem;
+    padding-left: 20px;
+}
+
+.consultant-img {
+    background: url('../kuvat/10_img.jpg') center/cover no-repeat;
+    width: 30%;
+    aspect-ratio: 1 / 1;
+    border: 1px solid #6C6C6C;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.service-card {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-bottom: 1px solid white;
+    padding-bottom: 2rem;
+    max-width: 90%;
+
+}
+
+.service-card.hybrid {
+    display: grid;
+    gap: 2rem;
+}
+
+.service-card > h2 {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.services-cta {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.self-service-img {
+    background: url('../kuvat/70_img.jpg') center/cover no-repeat;
+    width: 100%;
+    aspect-ratio: 1.7 / 1;
+    border: 1px solid #6C6C6C;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.hybrid-img {
+    background: url('../kuvat/link_img.jpg') center/cover no-repeat;
+    width: 100%;
+    aspect-ratio: 1.5 / 1;
+    border: 1px solid #6C6C6C;
+    border-radius: 10px;
+    margin: auto;
+    order: -1;
+}
+
+.service-card.expanded .more-text {
+    display: inline;
+}
+
+
+
+/* ----------------
+Referenssit
+----------------- */
+
+.references-hero {
+    padding: 1rem 1rem;
+    text-align: center;
+}
+
+/* .references {
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+} */
+
+.references {
+    padding: 2rem 3rem;
+    display: grid;
+    gap: 2rem;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.reference-card {
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid white;
+}
+
+.reference-card > div {
+    background: #004364;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 1px 6px;
+    margin-bottom: 1rem;
+}
+
+.reference-card blockquote {
+    margin-bottom: 1rem;
+    font-style: italic;
+    background: rgba(255, 255, 255, 0.072);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* -----------
+    CONTACT
+------------*/
+.contact-hero {
+    padding: 1rem 1rem;
+    text-align: center;
+}
+
+.contact {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-info {
+    border-radius: 8px;
+}
+
+.contact-form {
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-radius: 10px;
+    background: #004364;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 6px;
+    border: 1px solid #ffffff;
+    background: #d9d9d9d7;
+    box-shadow: inset -6px -6px 6px rgba(0, 0, 0, 0.217);
+    margin-bottom: 15px;
+    color: black;
+    font-size: 16px;
+}
+
+.contact-form > .btn {
+    width: 100%;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px;
+    background: #004364;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.contact-label-wrapper > span {
+    color: rgba(255, 255, 255, 0.608);
+}
+
+.contact-icon {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-right: 20px;
+    background: red;
+}
+
+.map {
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.success-box {
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    animation: fadeIn 0.4s ease;
+}
+
+.success-box h3 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+/* DESKTOP */
+@media (min-width: 768px) {
+
+    .hamburger {
+        display: none; /* Piilotetaan burger */
+    }
+
+    .nav {
+        display: flex !important;  /* Näytetään nav */
+        position: static;
+        flex-direction: row;
+        gap: 2rem;
+        width: auto;
+        background: none;
+    }
+
+    .nav a {
+        border: none;
+        padding: 0;
+    }
+
+    .references-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .references-card {
+        background: #0043647c;
+        max-height: 300px;
+        max-width: 350px;
+    }
+
+    .more-text {
+        display: inline;
+    }
+
+    .read-more-btn {
+        display: none;
+    }
+
+    .service-card.hybrid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: flex-start;
+    }
+
+    .hybrid-img {
+        order: 0; /* palautetaan normaali järjestys */
+    }
+
+    .consultant-info {
+        border-radius: 10px;
+        background: #0000007e;
+        height: 8rem;
+        width: 50%;
+        margin-top: -15%;
+        margin-bottom: 10%;
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: 20px;
+    }
+
+    .contact-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* .contact-info-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    } */
+
+    .map {
+        margin: 0;
+        width: 50%;
+    }
+
+    .phone {
+        margin: 0;
+    }
+}
+
+
