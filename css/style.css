@@ -232,6 +232,13 @@ button:hover {
     width: 90%;
 }
 
+.link-img {
+    background: url('../kuvat/risk-management_link.png') center/cover no-repeat;
+    width: 40px;
+    aspect-ratio: 1 / 1;
+    z-index: 10;
+}
+
 .more-text {
     display: none;
 }
@@ -256,6 +263,8 @@ button:hover {
     text-align: left;
     padding: 1rem;
 }
+
+
 
 
 /* -----------
@@ -320,7 +329,7 @@ button:hover {
 .self-service-img {
     background: url('../kuvat/70_img.jpg') center/cover no-repeat;
     width: 100%;
-    aspect-ratio: 1.7 / 1;
+    aspect-ratio: 1 / 1.2;
     border: 1px solid #6C6C6C;
     border-radius: 10px;
     margin: auto;
@@ -338,6 +347,15 @@ button:hover {
 
 .service-card.expanded .more-text {
     display: inline;
+}
+
+.services-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 300px;
+    margin: auto;
+    margin-top: 10px;
 }
 
 
@@ -398,6 +416,13 @@ Referenssit
 
 .contact {
     padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact > .content-wrapper {
+    max-width: 50rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -468,6 +493,8 @@ Referenssit
     color: #ffffff;
     margin-bottom: 0.5rem;
 }
+
+
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
@@ -563,6 +590,11 @@ Referenssit
     .phone {
         margin: 0;
     }
+
+    .self-service-img {
+        aspect-ratio: 1.7 / 1;
+    }
+
 }
 
 
